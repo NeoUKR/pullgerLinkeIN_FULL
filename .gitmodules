@@ -1,4 +1,4 @@
-[submodule "pullgerFootPrint/com/linkein"]
-	path = pullgerFootPrint/com/linkein
+[submodule "pullgerFootPrint/com/linkedin"]
+	path = pullgerFootPrint/com/linkedin
 	url = https://github.com/PullgerFootPrint/com--linkedin.git
 	branch = NeoUKR
