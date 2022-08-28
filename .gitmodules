@@ -2,3 +2,7 @@
 	path = pullgerFootPrint/com/linkedin
 	url = https://github.com/PullgerFootPrint/com--linkedin.git
 	branch = NeoUKR
+[submodule "pullgerMultisessionManager"]
+	path = pullgerMultisessionManager
+	url = https://github.com/Pullger/pullgerMultisessionManager.git
+	branch = NeoUKR
