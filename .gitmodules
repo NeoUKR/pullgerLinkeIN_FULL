@@ -22,3 +22,7 @@
 	path = pullgerReflection/com_linkedin
 	url = https://github.com/PullgerReflection/com_linkedin.git
 	branch = NeoUKR
+[submodule "pullgerSquirrel"]
+	path = pullgerSquirrel
+	url = https://github.com/Pullger/pullgerSquirrel.git
+	branch = NeoUKR
