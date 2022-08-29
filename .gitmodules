@@ -26,3 +26,7 @@
 	path = pullgerSquirrel
 	url = https://github.com/Pullger/pullgerSquirrel.git
 	branch = NeoUKR
+[submodule "pullgerAccountManager"]
+	path = pullgerAccountManager
+	url = https://github.com/Pullger/pullgerAccountManager.git
+	branch = NeoUKR
