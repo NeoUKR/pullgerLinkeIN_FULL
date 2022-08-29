@@ -14,3 +14,11 @@
 	path = pullgerMultisessionManager_REST
 	url = https://github.com/Pullger/pullgerMultisessionManager_REST.git
 	branch = NeoUKR
+[submodule "pullgerDomain/com/linkedin"]
+	path = pullgerDomain/com/linkedin
+	url = https://github.com/PullgerDomain/com--linkedin.git
+	branch = NeoUKR
+[submodule "pullgerReflection/com_linkedin"]
+	path = pullgerReflection/com_linkedin
+	url = https://github.com/PullgerReflection/com_linkedin.git
+	branch = NeoUKR
