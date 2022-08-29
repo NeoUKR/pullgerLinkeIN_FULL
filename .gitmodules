@@ -38,3 +38,7 @@
 	path = djTaskBrocker_FRONT
 	url = https://github.com/TaskBrocker/djTaskBrocker_FRONT.git
 	branch = NeoUKR
+[submodule "pullgerAuthJWT"]
+	path = pullgerAuthJWT
+	url = https://github.com/Pullger/pullgerAuthJWT.git
+	branch = NeoUKR
