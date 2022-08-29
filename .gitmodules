@@ -30,3 +30,7 @@
 	path = pullgerAccountManager
 	url = https://github.com/Pullger/pullgerAccountManager.git
 	branch = NeoUKR
+[submodule "djTaskBrocker"]
+	path = djTaskBrocker
+	url = https://github.com/TaskBrocker/djTaskBrocker.git
+	branch = NeoUKR
