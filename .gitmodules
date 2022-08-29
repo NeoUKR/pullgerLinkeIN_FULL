@@ -1,7 +1,7 @@
 [submodule "pullgerFootPrint/com/linkedin"]
 	path = pullgerFootPrint/com/linkedin
 	url = https://github.com/PullgerFootPrint/com--linkedin.git
-	branch = NeoUKR
+	branch = NeoUKRcd
 [submodule "pullgerMultisessionManager"]
 	path = pullgerMultisessionManager
 	url = https://github.com/Pullger/pullgerMultisessionManager.git
@@ -45,4 +45,8 @@
 [submodule "pullgerExceptions"]
 	path = pullgerExceptions
 	url = https://github.com/Pullger/pullgerExceptions.git
+	branch = NeoUKR
+[submodule "pullgerReflection/com_linkedin__TT"]
+	path = pullgerReflection/com_linkedin__TT
+	url = https://github.com/PullgerReflection/com_linkedin__TT.git
 	branch = NeoUKR

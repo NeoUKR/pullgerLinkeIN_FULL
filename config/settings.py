@@ -48,7 +48,6 @@ PROJECT_INSTALLED_APPS = [
     'pullgerMultisessionManager_FRONT',
     'pullgerReflection.com_linkedin',
     'pullgerReflection.com_linkedin__TT',
-    'pullgerStudio',
 ]
 
 EXTERNAL_INSTALLED_APPS = [
