@@ -42,3 +42,7 @@
 	path = pullgerAuthJWT
 	url = https://github.com/Pullger/pullgerAuthJWT.git
 	branch = NeoUKR
+[submodule "pullgerExceptions"]
+	path = pullgerExceptions
+	url = https://github.com/Pullger/pullgerExceptions.git
+	branch = NeoUKR
