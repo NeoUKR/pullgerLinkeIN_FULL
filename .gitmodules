@@ -34,3 +34,7 @@
 	path = djTaskBrocker
 	url = https://github.com/TaskBrocker/djTaskBrocker.git
 	branch = NeoUKR
+[submodule "djTaskBrocker_FRONT"]
+	path = djTaskBrocker_FRONT
+	url = https://github.com/TaskBrocker/djTaskBrocker_FRONT.git
+	branch = NeoUKR
