@@ -1,0 +1,48 @@
+[submodule "pullgerFootPrint/com/linkedin"]
+	path = pullgerFootPrint/com/linkedin
+	url = https://github.com/PullgerFootPrint/com--linkedin.git
+	branch = NeoUKR
+[submodule "pullgerMultisessionManager"]
+	path = pullgerMultisessionManager
+	url = https://github.com/Pullger/pullgerMultisessionManager.git
+	branch = NeoUKR
+[submodule "pullgerMultisessionManager_FRONT"]
+	path = pullgerMultisessionManager_FRONT
+	url = https://github.com/Pullger/pullgerMultisessionManager_FRONT.git
+	branch = NeoUKR
+[submodule "pullgerMultisessionManager_REST"]
+	path = pullgerMultisessionManager_REST
+	url = https://github.com/Pullger/pullgerMultisessionManager_REST.git
+	branch = NeoUKR
+[submodule "pullgerDomain/com/linkedin"]
+	path = pullgerDomain/com/linkedin
+	url = https://github.com/PullgerDomain/com--linkedin.git
+	branch = NeoUKR
+[submodule "pullgerReflection/com_linkedin"]
+	path = pullgerReflection/com_linkedin
+	url = https://github.com/PullgerReflection/com_linkedin.git
+	branch = NeoUKR
+[submodule "pullgerSquirrel"]
+	path = pullgerSquirrel
+	url = https://github.com/Pullger/pullgerSquirrel.git
+	branch = NeoUKR
+[submodule "pullgerAccountManager"]
+	path = pullgerAccountManager
+	url = https://github.com/Pullger/pullgerAccountManager.git
+	branch = NeoUKR
+[submodule "djTaskBrocker"]
+	path = djTaskBrocker
+	url = https://github.com/TaskBrocker/djTaskBrocker.git
+	branch = NeoUKR
+[submodule "djTaskBrocker_FRONT"]
+	path = djTaskBrocker_FRONT
+	url = https://github.com/TaskBrocker/djTaskBrocker_FRONT.git
+	branch = NeoUKR
+[submodule "pullgerAuthJWT"]
+	path = pullgerAuthJWT
+	url = https://github.com/Pullger/pullgerAuthJWT.git
+	branch = NeoUKR
+[submodule "pullgerExceptions"]
+	path = pullgerExceptions
+	url = https://github.com/Pullger/pullgerExceptions.git
+	branch = NeoUKR
