@@ -58,6 +58,35 @@ class CompaniesListView(generics.GenericAPIView,
         return returnResponse
 
 
+class CompaniesRetrieveUpdateDeleteView(generics.GenericAPIView,
+                                    mixins.RetrieveModelMixin,
+                                    mixins.UpdateModelMixin,
+                                    mixins.DestroyModelMixin):
+    permission_classes = [IsAuthenticated]
+    pagination_class = CustomPaginator
+    queryset = models.people.objects.getAllPersons()
+
+    def get(self, request, *args, **kwargs):
+        try:
+            self.serializer_class = serializers.PeopleListSerializer
+            returnResponce = self.retrieve(request, *args, **kwargs)
+        except:
+            pass
+
+        return returnResponce
+
+    def put(self, request, *args, **kwargs):
+        self.serializer_class = serializers.PeopleModifySerializer
+        returnResponce = self.update(request, *args, **kwargs)
+        return returnResponce
+
+    def delete(self, request, *args, **kwargs):
+        self.serializer_class = serializers.PeopleModifySerializer
+        returnResponce = self.destroy(request, *args, **kwargs)
+        return returnResponce
+
+
+
 class PostListView(generics.GenericAPIView,
                    mixins.ListModelMixin,
                    mixins.CreateModelMixin):
@@ -105,7 +134,7 @@ class PostListView(generics.GenericAPIView,
         return returnResponse
 
 
-class PeopleRetriveUpdateDeleteView(generics.GenericAPIView,
+class PeopleRetrieveUpdateDeleteView(generics.GenericAPIView,
                                     mixins.RetrieveModelMixin,
                                     mixins.UpdateModelMixin,
                                     mixins.DestroyModelMixin):
