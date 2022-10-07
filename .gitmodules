@@ -50,3 +50,7 @@
 	path = pullgerReflection/com_linkedin__TT
 	url = https://github.com/PullgerReflection/com_linkedin__TT.git
 	branch = NeoUKR
+[submodule "pullgerReflection/com_linkedin__REST"]
+	path = pullgerReflection/com_linkedin__REST
+	url = https://github.com/PullgerReflection/com_linkedin__REST.git
+	branch = NeoUKR
