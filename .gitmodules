@@ -2,17 +2,17 @@
 	path = pullgerFootPrint/com/linkedin
 	url = https://github.com/PullgerFootPrint/com--linkedin.git
 	branch = NeoUKRcd
-[submodule "pullgerMultisessionManager"]
-	path = pullgerMultisessionManager
-	url = https://github.com/Pullger/pullgerMultisessionManager.git
+[submodule "pullgerMultiSessionManager"]
+	path = pullgerMultiSessionManager
+	url = https://github.com/Pullger/pullgerMultiSessionManager.git
 	branch = NeoUKR
-[submodule "pullgerMultisessionManager_FRONT"]
-	path = pullgerMultisessionManager_FRONT
-	url = https://github.com/Pullger/pullgerMultisessionManager_FRONT.git
+[submodule "pullgerMultiSessionManager_FRONT"]
+	path = pullgerMultiSessionManager_FRONT
+	url = https://github.com/Pullger/pullgerMultiSessionManager_FRONT.git
 	branch = NeoUKR
-[submodule "pullgerMultisessionManager_REST"]
-	path = pullgerMultisessionManager_REST
-	url = https://github.com/Pullger/pullgerMultisessionManager_REST.git
+[submodule "pullgerMultiSessionManager_REST"]
+	path = pullgerMultiSessionManager_REST
+	url = https://github.com/Pullger/pullgerMultiSessionManager_REST.git
 	branch = NeoUKR
 [submodule "pullgerDomain/com/linkedin"]
 	path = pullgerDomain/com/linkedin
