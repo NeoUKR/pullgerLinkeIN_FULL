@@ -46,7 +46,6 @@ PROJECT_INSTALLED_APPS = [
     'pullgerAuthJWT',
     'pullgerMultiSessionManager',
     'pullgerMultiSessionManager__REST',
-    'pullgerMultiSessionManager__FRONT',
     'pullgerReflection.com_linkedin',
     'pullgerReflection.com_linkedin__TT',
 ]

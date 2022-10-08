@@ -2,18 +2,6 @@
 	path = pullgerFootPrint/com/linkedin
 	url = https://github.com/PullgerFootPrint/com--linkedin.git
 	branch = NeoUKRcd
-[submodule "pullgerMultiSessionManager"]
-	path = pullgerMultiSessionManager
-	url = https://github.com/Pullger/pullgerMultiSessionManager.git
-	branch = NeoUKR
-[submodule "pullgerMultiSessionManager_FRONT"]
-	path = pullgerMultiSessionManager_FRONT
-	url = https://github.com/Pullger/pullgerMultiSessionManager_FRONT.git
-	branch = NeoUKR
-[submodule "pullgerMultiSessionManager_REST"]
-	path = pullgerMultiSessionManager_REST
-	url = https://github.com/Pullger/pullgerMultiSessionManager_REST.git
-	branch = NeoUKR
 [submodule "pullgerDomain/com/linkedin"]
 	path = pullgerDomain/com/linkedin
 	url = https://github.com/PullgerDomain/com--linkedin.git
@@ -53,4 +41,8 @@
 [submodule "pullgerReflection/com_linkedin__REST"]
 	path = pullgerReflection/com_linkedin__REST
 	url = https://github.com/PullgerReflection/com_linkedin__REST.git
+	branch = NeoUKR
+[submodule "pullgerMultiSessionManager"]
+	path = pullgerMultiSessionManager
+	url = https://github.com/Pullger/pullgerMultiSessionManager.git
 	branch = NeoUKR
