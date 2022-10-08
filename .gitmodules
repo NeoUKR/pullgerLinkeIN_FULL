@@ -46,3 +46,7 @@
 	path = pullgerMultiSessionManager
 	url = https://github.com/Pullger/pullgerMultiSessionManager.git
 	branch = NeoUKR
+[submodule "pullgerMultiSessionManager__REST"]
+	path = pullgerMultiSessionManager__REST
+	url = https://github.com/Pullger/pullgerMultiSessionManager__REST.git
+	branch = NeoUKR
