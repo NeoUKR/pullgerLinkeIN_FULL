@@ -48,11 +48,13 @@ PROJECT_INSTALLED_APPS = [
     'pullgerMultiSessionManager__REST',
     'pullgerReflection.com_linkedin',
     'pullgerReflection.com_linkedin__TT',
+    'pullgerDevelopmentFramework'
 ]
 
 EXTERNAL_INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 INSTALLED_APPS = STANDARD_INSTALLED_APPS + PROJECT_INSTALLED_APPS + EXTERNAL_INSTALLED_APPS
@@ -65,6 +67,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -157,7 +161,8 @@ logging.config.dictConfig({
         'default': {
             # exact format is not important, this is the minimum information
             # 'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-            'format': '%(levelname)s %(asctime)s - %(name)s\n\t{process: %(process)s module: [%(module)s] line: %(lineno)d}\n\t%(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
+            # 'format': '%(levelname)s %(asctime)s - %(name)s\n\treg uuid: %(reg)s\n\tfunction: [%(call_func)s] line: %(call_line)d module: [%(call_file)s]\n\tprocess: %(process)s relative: %(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
+            'format': '%(levelname)s %(asctime)s - %(name)s\n\tprocess: %(process)s relative: %(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
         },
         'django.server': DEFAULT_LOGGING['formatters']['django.server'],
     },
@@ -202,3 +207,5 @@ REST_FRAMEWORK = {
 }
 
 # TEMP_BASE_DIR = Path(__file__).resolve().parent.parent
+
+CORS_ORIGIN_ALLOW_ALL = True

@@ -1,9 +1,14 @@
-# 0.0.3.0
-#   [pullgerMultiSessionManager] {0.0.3.0}
+Version history [pullgerLinkedIN_FULL]
 
-# 0.0.2.0
-#   [pullgerExceptions] {0.0.1.0}
-#   [pullgerReflection/com_linkedin__TT] {0.0.2.1}
-#   [pullgerReflection/com_linkedin] {0.0.5.1}
+{0.1.0.0} [pullgerLinkedIN_FULL]
+ - cumulative update
 
-# 0.0.1.0
+{0.0.3.0} [pullgerLinkedIN_FULL]
+ - [pullgerMultiSessionManager] {0.0.3.0}
+
+{0.0.2.0} [pullgerLinkedIN_FULL]
+ - [pullgerExceptions] {0.0.1.0}
+ - [pullgerReflection/com_linkedin__TT] {0.0.2.1}
+ - [pullgerReflection/com_linkedin] {0.0.5.1}
+
+{0.0.1.0} [pullgerLinkedIN_FULL]
