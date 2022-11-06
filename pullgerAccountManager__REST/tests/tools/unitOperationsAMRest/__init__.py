@@ -1,10 +1,11 @@
 from rest_framework.test import APITestCase
-import pullgerAccountManager.tests.dataTemplate
+from pullgerAccountManager.tests.tools import dataTemplatesAM
 
-def addAccountForLinkedIN(self: APITestCase):
+
+def add_account_for_linkedin(self: APITestCase):
     self.client.credentials(HTTP_AUTHORIZATION="Token " + self.token)
 
-    LIA_Template = pullgerAccountManager.tests.dataTemplate.LinkedInAccount()
+    LIA_Template = dataTemplatesAM.LinkedInAccount()
     LIA_Template['authorization'] = 'linkedin.general'
 
     resultGet = self.client.post('/pullgerAM/api/account/', LIA_Template)

@@ -1,4 +1,4 @@
-from pullgerMultiSessionManager import api
+from pullgerMultiSessionManager import apiMSM
 from pullgerSquirrel.connectors.selenium import connector
 from django.apps import apps
 

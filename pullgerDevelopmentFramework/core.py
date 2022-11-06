@@ -4,7 +4,7 @@ import pullgerSquirrel
 from pullgerInternalControl import pIC_pMSM
 from pullgerInternalControl import pIC_pD
 
-from pullgerMultiSessionManager import api as pMSM_API
+from pullgerMultiSessionManager import apiMSM as pMSM_API
 from pullgerSquirrel.connectors.selenium import connector
 from django.apps import apps
 

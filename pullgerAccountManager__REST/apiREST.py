@@ -3,33 +3,35 @@ from rest_framework.views import APIView
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from pullgerAccountManager import api
+from pullgerAccountManager import apiAM
 from pullgerInternalControl.pullgerAccountManager import api as exceptions
 from . import serializers
 import logging
 
 
-class ping(APIView):
+class Ping(APIView):
     permission_classes = (AllowAny,)
 
     def get(self, request):
         content ={'message': 'Pong. Account Manager.'}
         return Response(content)
 
-class pingAuth(APIView):
+
+class PingAuth(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        content ={'message': 'Pong. Account Manager.'}
+        content = {'message': 'Pong. Account Manager.'}
         return Response(content)
 
-@api_view(['GET','POST'])
+
+@api_view(['GET', 'POST'])
 @permission_classes([IsAuthenticated])
-def getAccountList(request):
+def get_account_list(request):
     logger = logging.getLogger('pullgerAccountManager.REST.getAccountList')
 
     if request.method == 'GET':
-        accountList = api.getAccountList()
+        accountList = apiAM.get_account_list()
 
         serializedContent = serializers.AccountListSerializer(accountList, many=True)
         content ={'message': 'OK', 'data': serializedContent.data}
@@ -50,19 +52,19 @@ def getAccountList(request):
         parameters = {}
         # -----------------login----------------
         login = requestData.get('login')
-        if login == None:
+        if login is None:
             returnMessage = returnMessage + "[Login] is required field."
         else:
             parameters['login'] = login
         # -------------------password---------------
         password = requestData.get('password')
-        if password == None:
+        if password is None:
             returnMessage = returnMessage + "[Password] is required field."
         else:
             parameters['password'] = password
         # --------------------authorization---------------
         authorization = requestData.get('authorization')
-        if authorization == None:
+        if authorization is None:
             returnMessage = returnMessage + "[Authorization] is required field."
         else:
             parameters['authorization'] = authorization
@@ -76,7 +78,7 @@ def getAccountList(request):
             logger.info({'requestData': requestData, 'discription': returnMessage, 'path': request.stream.path})
         else:
             try:
-                newUUID = api.addAccount(**parameters)
+                newUUID = apiAM.add_account(**parameters)
                 content['data']['uuid'] = newUUID
                 statusResp = status.HTTP_200_OK
                 returnMessage = 'OK'
@@ -84,11 +86,11 @@ def getAccountList(request):
                 statusResp = status.HTTP_400_BAD_REQUEST
                 returnMessage = str(e)
                 requestData['password'] = '*****'
-                logger.info({'requestData': requestData, 'discription': returnMessage, 'path': request.stream.path})
+                logger.info({'requestData': requestData, 'description': returnMessage, 'path': request.stream.path})
             except BaseException as e:
                 statusResp = status.HTTP_500_INTERNAL_SERVER_ERROR
                 requestData['password'] = '*****'
-                logger.error({'requestData':requestData , 'discription': str(e), 'path': request.stream.path})
+                logger.error({'requestData':requestData , 'description': str(e), 'path': request.stream.path})
                 returnMessage = 'Internal system error. Contact to support.'
 
         content['message'] = returnMessage

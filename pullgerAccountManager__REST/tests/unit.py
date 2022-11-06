@@ -1,4 +1,4 @@
-from . import UnitOperations
+from .tools import unitOperationsAMRest
 from pullgerAuthJWT.tests import unit as unitAuthJWT
 from rest_framework.test import APITestCase
 
@@ -18,4 +18,4 @@ class Test_000_REST(APITestCase):
         self.assertEqual(resultGet.status_code, 200, "General API Critical error with authentification.")
 
     def test_000_AccountAddforLinkedIN(self):
-        UnitOperations.addAccountForLinkedIN(self)
+        unitOperationsAMRest.add_account_for_linkedin(self)

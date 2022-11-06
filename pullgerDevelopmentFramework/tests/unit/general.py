@@ -1,7 +1,6 @@
 from django.test import TestCase
 # from django.apps import apps
 # from pullgerMultiSessionManager import api, core
-from pullgerMultiSessionManager.tests import UnitOperations
 from pullgerDevelopmentFramework import api
 
 
