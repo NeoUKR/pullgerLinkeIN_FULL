@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-x(qcs-$%fm65#5ju3bjqku^b-n+vkf71e4yrmlz4)ydk%w@t!x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,17 +42,19 @@ STANDARD_INSTALLED_APPS = [
 
 PROJECT_INSTALLED_APPS = [
     'pullgerAccountManager',
+    'pullgerAccountManager__REST',
     'pullgerAuthJWT',
-    'pullgerMultisessionManager',
-    'pullgerMultisessionManager_REST',
-    'pullgerMultisessionManager_FRONT',
+    'pullgerMultiSessionManager',
+    'pullgerMultiSessionManager__REST',
     'pullgerReflection.com_linkedin',
     'pullgerReflection.com_linkedin__TT',
+    'pullgerDevelopmentFramework'
 ]
 
 EXTERNAL_INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 INSTALLED_APPS = STANDARD_INSTALLED_APPS + PROJECT_INSTALLED_APPS + EXTERNAL_INSTALLED_APPS
@@ -65,6 +67,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware'
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -146,7 +150,9 @@ from django.utils.log import DEFAULT_LOGGING
 # Disable Django's logging setup
 LOGGING_CONFIG = None
 
-LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+# LOGLEVEL = os.environ.get('LOGLEVEL', 'INFO').upper()
+LOGLEVEL = os.environ.get('LOGLEVEL', 'DEBUG').upper()
+
 
 logging.config.dictConfig({
     'version': 1,
@@ -155,20 +161,21 @@ logging.config.dictConfig({
         'default': {
             # exact format is not important, this is the minimum information
             # 'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-            'format': '%(levelname)s %(asctime)s - %(name)s\n\t{process: %(process)s module: [%(module)s] line: %(lineno)d}\n\t%(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
+            # 'format': '%(levelname)s %(asctime)s - %(name)s\n\treg uuid: %(reg)s\n\tfunction: [%(call_func)s] line: %(call_line)d module: [%(call_file)s]\n\tprocess: %(process)s relative: %(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
+            'format': '%(levelname)s %(asctime)s - %(name)s\n\tprocess: %(process)s relative: %(relativeCreated)6d %(threadName)s\n\t\t%(message)s'
         },
         'django.server': DEFAULT_LOGGING['formatters']['django.server'],
     },
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'class': 'logging.FileHandler',
             'formatter': 'default',
-            'filename': 'djangoapp.log',
+            'filename': './log/djangoapp.log',
         },
         # console logs to stderr
         'console': {
-            'level': 'WARNING',
+            'level': 'DEBUG',
             'class': 'logging.StreamHandler',
             'formatter': 'default',
         },
@@ -179,6 +186,7 @@ logging.config.dictConfig({
         '': {
             'level': LOGLEVEL,
             'handlers': ['file'],
+            # 'handlers': ['file'],
         },
         # Our application code
         # 'app': {
@@ -197,3 +205,7 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
 }
+
+# TEMP_BASE_DIR = Path(__file__).resolve().parent.parent
+
+CORS_ORIGIN_ALLOW_ALL = True

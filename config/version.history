@@ -1,0 +1,23 @@
+Version history [pullgerLinkedIN_FULL]
+
+{0.2.0.0} [pullgerLinkedIN_FULL]
+ - cumulative update
+
+{0.1.2.0} [pullgerLinkedIN_FULL]
+ - fixing
+
+{0.1.1.0} [pullgerLinkedIN_FULL]
+ - add submodule [pullgerInternalControl]
+
+{0.1.0.0} [pullgerLinkedIN_FULL]
+ - cumulative update
+
+{0.0.3.0} [pullgerLinkedIN_FULL]
+ - [pullgerMultiSessionManager] {0.0.3.0}
+
+{0.0.2.0} [pullgerLinkedIN_FULL]
+ - [pullgerExceptions] {0.0.1.0}
+ - [pullgerReflection/com_linkedin__TT] {0.0.2.1}
+ - [pullgerReflection/com_linkedin] {0.0.5.1}
+
+{0.0.1.0} [pullgerLinkedIN_FULL]

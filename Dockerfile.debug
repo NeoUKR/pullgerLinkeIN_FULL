@@ -1,0 +1,50 @@
+# Python and Linux Version
+# FROM python:3.10.0a1-alpine3.12
+FROM python:3.11.0rc2-bullseye
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY requirements.txt /app/requirements.txt
+
+# Configure server
+# RUN set -ex \
+#    && pip install --upgrade pip \
+#    && pip install --no-cache-dir -r /app/requirements.txt
+
+RUN ["apt-get", "update"]
+RUN ["apt-get", "-y", "install", "vim"]
+
+# Install chrome driver and selenium
+RUN mkdir ./app/tmp/
+WORKDIR /app/tmp
+
+RUN version=$(curl -s "https://chromedriver.storage.googleapis.com/LATEST_RELEASE") && \
+    wget -qP /app/tmp/ "https://chromedriver.storage.googleapis.com/${version}/chromedriver_linux64.zip"
+RUN unzip -o chromedriver_linux64.zip -d /usr/local/bin
+RUN chmod 755 /usr/local/bin/chromedriver
+
+RUN ["wget", "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"]
+RUN apt-get -y install /app/tmp/google-chrome-stable_current_amd64.deb
+
+
+
+# Install libraries
+RUN pip install --upgrade pip
+RUN pip install -r /app/requirements.txt
+
+# Working directory
+WORKDIR /app
+
+ADD . .
+
+# RUN python3 manage.py test pullgerReflection.com_linkedin.tests.end_to_end
+
+# EXPOSE 8000
+
+# CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "core.wsgi:application"]
+
+# CMD gunicorn config.wsgi:application --bind 0.0.0.0:8000
+
+CMD ["bash"]
