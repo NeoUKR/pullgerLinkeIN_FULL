@@ -48,7 +48,8 @@ PROJECT_INSTALLED_APPS = [
     'pullgerMultiSessionManager__REST',
     'pullgerReflection.com_linkedin',
     'pullgerReflection.com_linkedin__TT',
-    'pullgerDevelopmentFramework'
+    'pullgerDevelopmentFramework',
+    'djTaskBrocker'
 ]
 
 EXTERNAL_INSTALLED_APPS = [
